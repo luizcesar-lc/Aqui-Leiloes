@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Aqui - Login</title>
+    <link rel="stylesheet" href="/pages//css/global.css" />
+    <link rel="stylesheet" href="/pages//css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="centralize">
+    <form>
+      <div class="formField">
+        <div><label>Email</label></div>
+        <input
+          type="email"
+          name="email"
+          id="emailForm"
+          onchange="onChangeEmail()"
+          placeholder="aqui@email.com"
+        />
+        <div class="errorLogin" id="emailRequiredError">
+          E-mail é obrigatório
+        </div>
+        <div class="errorLogin" id="emailInvalidError">E-mail é inválido</div>
+      </div>
+      <div class="formField">
+        <div><label>Senha</label></div>
+        <input
+          type="password"
+          name="password"
+          id="passwordForm"
+          onchange="onChangePassword()"
+        />
+        <div class="errorLogin" id="passwordRequiredError">
+          Senha é obrigatório
+        </div>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="resetPassaword"
+          id="recoverPasswordButton"
+          onclick="recoverPassword()"
+          disabled
+        >
+          Recuperar a senha
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="enter"
+          id="loginButton"
+          disabled
+          onclick="login()"
+        >
+          Entrar
+        </button>
+      </div>
+      <div>
+        <button type="button" class="register" onclick="register()">
+          Registrar
+        </button>
+      </div>
+    </form>
+  </body>
+
+  <script src="/pages//js/validations.js"></script>
+  <script src="/pages//js/login.js"></script>
+  <script src="/pages//js/loading.js"></script>
+
+  <!-- Autenticação de Login-->
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: 'AIzaSyCWT_vJHAy4Kal1QxBN2EeTEivtoNHU9K8',
+      authDomain: 'voltaic-mantra-369917.firebaseapp.com',
+      projectId: 'voltaic-mantra-369917',
+      storageBucket: 'voltaic-mantra-369917.appspot.com',
+      messagingSenderId: '38492072148',
+      appId: '1:38492072148:web:52d6c6b353270e4f7ab341',
+      measurementId: 'G-127MVXRKM2',
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</html>

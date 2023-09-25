@@ -1,0 +1,64 @@
+body {
+  background: #ffffff;
+  height: 100vh;
+}
+
+form {
+  width: 300px;
+  padding: 1.5rem;
+  border: 1px solid #1d168f;
+  border-radius: 0.25rem;
+}
+input,
+button {
+  padding: 0.5rem;
+  width: -webkit-fill-available;
+  border-radius: 0.15rem;
+}
+button {
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+label {
+  color: black;
+  font-size: 19px;
+  font-family: Roboto;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+input {
+  color: black;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.formField{
+  margin-bottom: 0.25rem;
+}
+.resetPassaword {
+  background: transparent;
+  color: #1d168f;
+  border: none;
+}
+.enter {
+  background: #1d168f;
+  color: #ffffff;
+  border: none;
+}
+.register {
+  background: transparent;
+  color: #1d168f;
+  border: 1px solid #1d168f;
+}
+
+.errorLogin {
+  color: #ffffff;
+  font-size: 13px;
+  background: red;
+  display: none;
+}
