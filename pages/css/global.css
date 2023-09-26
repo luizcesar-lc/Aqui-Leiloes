@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-.centralize{
+.centralize {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,5 +25,39 @@ button:active {
 
 .loading label {
   font-size: 2rem;
-  color: #FFFFFF ;
+  color: #ffffff;
+}
+
+.formField {
+  margin-bottom: 0.25rem;
+}
+
+input,
+button {
+  padding: 0.5rem;
+  width: -webkit-fill-available;
+  border-radius: 0.15rem;
+}
+
+.resetPassaword {
+  background: transparent;
+  color: #1d168f;
+  border: none;
+}
+.solid {
+  background: #1d168f;
+  color: #ffffff;
+  border: none;
+}
+.clear {
+  background: transparent;
+  color: #1d168f;
+  border: 1px solid #1d168f;
+}
+
+.errorLogin {
+  color: #ffffff;
+  font-size: 13px;
+  background: red;
+  display: none;
 }

@@ -29,7 +29,7 @@ function login() {
     });
 }
 
-//Função para mostrar erro de senha auth/invalid-login-credentials
+//Função para mostrar erro de senha *Não esta verificando senhas "auth/invalid-login-credentials"
 function getErrorMessage(error) {
   if (error.code == 'auth/invalid-login-credentials') {
     
@@ -57,7 +57,7 @@ function recoverPassword() {
 }
 
 //Função para ir a página registro
-function register() {
+function clear() {
   window.location.href = 'register.html';
 }
 

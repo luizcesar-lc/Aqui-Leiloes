@@ -2,15 +2,59 @@
 <html lang="pt-br">
   <head>
     <title>Aqui - Registrar</title>
-    <link rel="stylesheet" href="/pages/css/global.css">
-    <link rel="stylesheet" href="/pages//css/login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/pages/css/global.css" />
+    <link rel="stylesheet" href="/pages/css/register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
-    Registrar
+  <body class="centralize">
+    <form>
+      <div class="formField">
+        <div><label>Email</label></div>
+        <input type="email" placeholder="aqui@email.com" onchange="onChangeEmail()" id="emailForm"/>
+      </div>
+      <div class="errorLogin" id="emailRequiredError">
+          E-mail é obrigatório
+        </div>
+        <div class="errorLogin" id="emailInvalidError">
+          E-mail é inválido</div>
+      </div>
+
+      <div class="formField">
+        <div><label>Senha</label></div>
+        <input type="password" placeholder="Senha" id="passwordForm" onchange="onChangePassword()"/>
+      </div>
+
+      <div class="errorLogin" id="passwordRequiredError">
+          Senha é obrigatória
+      </div>
+      <div class="errorLogin" id="passwordMinLengthError">
+          Senha deve conter pelo menos 6 caracteres</div>
+      </div>
+
+      <div class="formField">
+        <div><label>Confirmar senha</label></div>
+        <input type="password" placeholder="Confirmar senha" id="confirmPasswordForm" onchange="onChangeConfirmPassword()"/>
+      </div>
+      <div class="errorLogin" id="confirmPasswordDoesntMatchError">
+          Senha e Confirmar Senha devem ser iguais
+      </div>
+
+      <div>
+        <button type="button" class="solid" disabled>Registrar</button>
+      </div>
+
+      <div>
+        <button type="button" class="clear" id="registerButton">Login</button>
+      </div>
+    </form>
   </body>
 
+  <script src="/pages/js/register.js"></script>
+  <script src="/pages/js/validations.js"></script>
 </html>
