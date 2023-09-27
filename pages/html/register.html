@@ -17,44 +17,49 @@
       <div class="formField">
         <div><label>Email</label></div>
         <input type="email" placeholder="aqui@email.com" onchange="onChangeEmail()" id="emailForm"/>
-      </div>
-      <div class="errorLogin" id="emailRequiredError">
+        <div class="errorLogin" id="emailRequiredError">
           E-mail é obrigatório
         </div>
         <div class="errorLogin" id="emailInvalidError">
-          E-mail é inválido</div>
+          E-mail é inválido
+        </div>
       </div>
 
       <div class="formField">
         <div><label>Senha</label></div>
         <input type="password" placeholder="Senha" id="passwordForm" onchange="onChangePassword()"/>
-      </div>
-
-      <div class="errorLogin" id="passwordRequiredError">
-          Senha é obrigatória
-      </div>
-      <div class="errorLogin" id="passwordMinLengthError">
-          Senha deve conter pelo menos 6 caracteres</div>
+        <div class="errorLogin" id="passwordRequiredError">
+           Senha é obrigatória
+        </div>
+        <div class="errorLogin" id="passwordMinLengthError">
+          Senha deve conter pelo menos 6 caracteres
+        </div>
       </div>
 
       <div class="formField">
         <div><label>Confirmar senha</label></div>
         <input type="password" placeholder="Confirmar senha" id="confirmPasswordForm" onchange="onChangeConfirmPassword()"/>
-      </div>
-      <div class="errorLogin" id="confirmPasswordDoesntMatchError">
+        <div class="errorLogin" id="confirmPasswordDoesntMatchError">
           Senha e Confirmar Senha devem ser iguais
+        </div>
+
+      </div>
+      <div>
+        <button type="button" class="solid" disabled onclick="register()" id="registerButton">Registrar</button>
       </div>
 
       <div>
-        <button type="button" class="solid" disabled>Registrar</button>
-      </div>
-
-      <div>
-        <button type="button" class="clear" id="registerButton">Login</button>
+        <button type="button" class="clear">Login</button>
       </div>
     </form>
   </body>
 
   <script src="/pages/js/register.js"></script>
   <script src="/pages/js/validations.js"></script>
+  <script src="/pages//js/loading.js"></script>
+
+  <!-- Autenticação de Login-->
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+  <script src="/pages/js/firebase-init.js"></script>
 </html>

@@ -30,6 +30,33 @@ function onChangeConfirmPassword() {
   toggleRegisterButtonDisabled();
 }
 
+//Função paa registrar usuario
+function register() {
+  showLoading();
+
+  const email = form.emailForm().value;
+  const password = form.passwordForm().value;
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(() => {
+      hideLoading();
+      window.location.href = 'home.html';
+    })
+    .catch((error) => {
+      hideLoading();
+      alert(getErrorMessage(error));
+    });
+}
+
+//Função para pegar erro da validação do registro
+function getErrorMessage(error){
+if (error.code == 'auth/email-already-in-use') {
+  return 'Email já está em uso';
+}
+    return error.message;
+}
+
 //Função para validar se senhas são iguais
 function validatePasswordMatch() {
   const password = form.passwordForm().value;

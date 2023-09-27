@@ -29,18 +29,19 @@ function login() {
     });
 }
 
-//Função para mostrar erro de senha *Não esta verificando senhas "auth/invalid-login-credentials"
+//Função para mostrar erro de senha
 function getErrorMessage(error) {
   if (error.code == 'auth/invalid-login-credentials') {
-    
-    return 'Usuário não encontrado';
-  }
-  if (error.code == 'auth/wrong-password') {
-    return 'Senha inválida';
+    if (error.message.includes('Usuário não encontrado')) {
+      return 'Usuário não encontrado';
+    } else {
+      return 'Senha inválida';
+    }
   }
   return error.message;
 }
 
+//Função para validar recuperação de senha, porem está validdando qualquer usuario *arrumar*
 function recoverPassword() {
   showLoading();
   firebase
