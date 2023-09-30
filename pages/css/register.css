@@ -41,11 +41,9 @@ input {
 .googleContainer {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza verticalmente no eixo Y *
-  margin-top: 20px; /* Ajuste a margem conforme necessário */
+  align-items: center; 
 }
 
-/* Estilos para o botão de registro com o Google */
 .googleRegisterButton {
   display: flex;
   align-items: center;
