@@ -31,3 +31,40 @@ input {
   font-weight: 400;
   word-wrap: break-word;
 }
+
+.orText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.googleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza verticalmente no eixo Y *
+  margin-top: 20px; /* Ajuste a margem conforme necessário */
+}
+
+/* Estilos para o botão de registro com o Google */
+.googleRegisterButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.2rem;
+}
+
+.googleRegisterButton:hover {
+  background-color: #357ae8;
+}
+
+.googleIcon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}

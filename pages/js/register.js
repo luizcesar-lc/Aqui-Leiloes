@@ -103,6 +103,27 @@ function goLogin() {
   window.location.href = 'login.html';
 }
 
+function registerWithGoogle() {
+  showLoading();
+
+  // Criar uma instância do provedor do Google
+  const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+  // Fazer o login com o Google
+  firebase
+    .auth()
+    .signInWithPopup(googleAuthProvider)
+    .then((result) => {
+      // Usuário registrado com sucesso
+      hideLoading();
+      window.location.href = 'home.html'; // Redirecionar para a página de login ou outra página após o registro
+    })
+    .catch((error) => {
+      hideLoading();
+      alert(getErrorMessage(error));
+    });
+}
+
 //Encapsulaçao de busca repetidas
 const form = {
   emailForm: () => document.getElementById('emailForm'),
