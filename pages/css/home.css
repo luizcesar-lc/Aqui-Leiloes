@@ -1,12 +1,15 @@
 header {
   background: #f2b705;
-  box-shadow: 0px 3px 10px #F2B705;
+  box-shadow: 0px 3px 10px #f2b705;
+  position: relative;
+  z-index: 2;
+  height: 90px;
 }
 
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 6rem;
+  padding: 0.5rem 6rem;
 }
 
 .logo {
@@ -37,7 +40,7 @@ header {
 .nav-link {
   text-decoration: none;
   font-size: 1.15rem;
-  color: #000000;
+  color: #ffffff;
   font-weight: 400;
 }
 
@@ -62,9 +65,105 @@ header button {
   display: none;
 }
 
+.containerSearch {
+  background: #f2cb05;
+  padding: 0 20px;
+  height: 30vh;
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  color: #ffffff;
+  background: #e6d81a;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  max-width: 450px;
+  margin: auto;
+  position: relative;
+}
+
+.search input {
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  height: 3rem;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+.searchButton {
+  background: #1d168f;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 2rem;
+   width: auto;
+  height: 3rem;
+
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.search.active input {
+  border-radius: 5px 5px 0 0;
+}
+
+.search .list {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1; 
+}
+
+.search.active .list {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+  max-height: none;
+  border-top: 1px solid #ccc;
+  background: #fff;
+  top: 100%;
+  left: 0;
+  width: 79.7%;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+.list li {
+  list-style: none;
+  padding: 8px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 0.5rem;
+}
+
+.search.active .list li {
+  display: block;
+}
+
+.list li:hover {
+  background: #efefef;
+}
+
 @media screen and (max-width: 730px) {
   .nav-bar {
-    padding: 1.5rem 4rem;
+    padding: 1rem 4rem;
   }
 
   .nav-item {
@@ -109,4 +208,14 @@ header button {
   .open {
     display: block;
   }
+
+  .search input {
+    margin-top: 1rem;
+  }
+
+  .searchButton {
+    margin-top: 1rem; 
+    width: 100%;
+  }
+  
 }
