@@ -16,20 +16,28 @@
     <form>
       <div class="formField">
         <div><label>Email</label></div>
-        <input type="email" placeholder="aqui@email.com" onchange="onChangeEmail()" id="emailForm"/>
+        <input
+          type="email"
+          placeholder="aqui@email.com"
+          onchange="onChangeEmail()"
+          id="emailForm"
+        />
         <div class="errorLogin" id="emailRequiredError">
           E-mail é obrigatório
         </div>
-        <div class="errorLogin" id="emailInvalidError">
-          E-mail é inválido
-        </div>
+        <div class="errorLogin" id="emailInvalidError">E-mail é inválido</div>
       </div>
 
       <div class="formField">
         <div><label>Senha</label></div>
-        <input type="password" placeholder="Senha" id="passwordForm" onchange="onChangePassword()"/>
+        <input
+          type="password"
+          placeholder="Senha"
+          id="passwordForm"
+          onchange="onChangePassword()"
+        />
         <div class="errorLogin" id="passwordRequiredError">
-           Senha é obrigatória
+          Senha é obrigatória
         </div>
         <div class="errorLogin" id="passwordMinLengthError">
           Senha deve conter pelo menos 6 caracteres
@@ -38,28 +46,40 @@
 
       <div class="formField">
         <div><label>Confirmar senha</label></div>
-        <input type="password" placeholder="Confirmar senha" id="confirmPasswordForm" onchange="onChangeConfirmPassword()"/>
+        <input
+          type="password"
+          placeholder="Confirmar senha"
+          id="confirmPasswordForm"
+          onchange="onChangeConfirmPassword()"
+        />
         <div class="errorLogin" id="confirmPasswordDoesntMatchError">
           Senha e Confirmar Senha devem ser iguais
         </div>
-
       </div>
       <div>
-        <button type="button" class="solid" disabled onclick="register()" id="registerButton">Registrar</button>
+        <button
+          type="button"
+          class="solid"
+          disabled
+          onclick="register()"
+          id="registerButton"
+        >
+          Registrar
+        </button>
       </div>
 
       <div>
-        <button type="button" class="clear">Login</button>
+        <button type="button" class="clear" onclick="goLogin()">Login</button>
       </div>
     </form>
   </body>
-
-  <script src="/pages/js/register.js"></script>
-  <script src="/pages/js/validations.js"></script>
-  <script src="/pages//js/loading.js"></script>
 
   <!-- Autenticação de Login-->
   <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
   <script src="/pages/js/firebase-init.js"></script>
+
+  <script src="/pages/js/register.js"></script>
+  <script src="/pages//js/loading.js"></script>
+  <script src="/pages/js/validations.js"></script>
 </html>

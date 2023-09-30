@@ -1,3 +1,10 @@
+// Para que o usuario continue logado
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    window.location.href = 'home.html';
+  }
+});
+
 //Valida os erros email
 function onChangeEmail() {
   toggleButtonDisabled();
@@ -41,15 +48,34 @@ function getErrorMessage(error) {
   return error.message;
 }
 
-//Função para validar recuperação de senha, porem está validdando qualquer usuario *arrumar*
+//Função para validar recuperação de senha
 function recoverPassword() {
+  const email = form.emailForm().value;
+
   showLoading();
+
   firebase
     .auth()
-    .sendPasswordResetEmail(form.emailForm().value)
-    .then(() => {
-      hideLoading();
-      alert('E-mail enviado com sucesso');
+    .fetchSignInMethodsForEmail(email)
+    .then((signInMethods) => {
+      if (signInMethods.length === 0) {
+        hideLoading();
+        alert(
+          'Este email não está registrado. Por favor, insira um email válido.'
+        );
+      } else {
+        firebase
+          .auth()
+          .sendPasswordResetEmail(email)
+          .then(() => {
+            hideLoading();
+            alert('E-mail de redefinição de senha enviado com sucesso.');
+          })
+          .catch((error) => {
+            hideLoading();
+            alert(getErrorMessage(error));
+          });
+      }
     })
     .catch((error) => {
       hideLoading();
@@ -57,8 +83,9 @@ function recoverPassword() {
     });
 }
 
+
 //Função para ir a página registro
-function clear() {
+function goRegister() {
   window.location.href = 'register.html';
 }
 

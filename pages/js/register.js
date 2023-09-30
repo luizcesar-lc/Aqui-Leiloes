@@ -1,3 +1,10 @@
+// Para que o usuario continue logado
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    window.location.href = 'home.html';
+  }
+});
+
 //Mostrar erro no campo de email
 function onChangeEmail() {
   const email = form.emailForm().value;
@@ -30,7 +37,7 @@ function onChangeConfirmPassword() {
   toggleRegisterButtonDisabled();
 }
 
-//Função paa registrar usuario
+//Função para registrar usuario
 function register() {
   showLoading();
 
@@ -50,11 +57,11 @@ function register() {
 }
 
 //Função para pegar erro da validação do registro
-function getErrorMessage(error){
-if (error.code == 'auth/email-already-in-use') {
-  return 'Email já está em uso';
-}
-    return error.message;
+function getErrorMessage(error) {
+  if (error.code == 'auth/email-already-in-use') {
+    return 'Email já está em uso';
+  }
+  return error.message;
 }
 
 //Função para validar se senhas são iguais
@@ -66,7 +73,7 @@ function validatePasswordMatch() {
     password == confirmPassword ? 'none' : 'block';
 }
 
-//Habilitar botão dde registrar
+//Habilitar botão de registrar
 function toggleRegisterButtonDisabled() {
   form.registerButton().disabled = !isFormValid();
 }
@@ -89,6 +96,11 @@ function isFormValid() {
   }
 
   return true;
+}
+
+//Função para ir a página login
+function goLogin() {
+  window.location.href = 'login.html';
 }
 
 //Encapsulaçao de busca repetidas
