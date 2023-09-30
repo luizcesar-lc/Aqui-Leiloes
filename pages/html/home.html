@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aqui - Leilões</title>
     <link rel="stylesheet" href="/pages//css/global.css" />
     <link rel="stylesheet" href="/pages//css/home.css" />
@@ -14,8 +17,38 @@
 
   <body>
     <header>
-      <div class="buttonsHome">
-      <button type="button" class="clear" onclick="logout()">Logout</button>
+      <nav class="nav-bar">
+        <div class="logo">
+          <img src="/pages/icons/logo-branca.png" alt="Aqui Logo" class="AquiIcon" />
+        </div>
+
+        <div class="nav-list">
+          <ul>
+            <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Cadastrar</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Vender</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Quem somos?</a></li>
+          </ul>
+        </div>
+        <div class="buttonsHome">
+          <button type="button" class="solid" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="mobile-menu-icon">
+          <button onclick="menuShow()"> <img class="icon-header" src="/pages/icons/menu-mobile.png" alt="Menu para mobile"></button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Cadastrar</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Vender</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Quem somos?</a></li>
+        </ul>
+        <div class="buttonsHome">
+          <button type="button" class="solid" onclick="logout()">Logout</button>
+        </div>
       </div>
     </header>
   </body>
@@ -26,4 +59,5 @@
 
   <script src="/pages/js/auth-guard.js"></script>
   <script src="/pages/js/home.js"></script>
+  <script src="/pages/js/header.js"></script>
   </html>
