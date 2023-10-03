@@ -1,7 +1,7 @@
 // Para que o usuario continue logado
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    window.location.href = 'home.html';
+    window.location.href = '../../index.html';
   }
 });
 
@@ -28,7 +28,7 @@ function login() {
     )
     .then((response) => {
       hideLoading();
-      window.location.href = 'home.html';
+      window.location.href = '../../index.html';
     })
     .catch((error) => {
       hideLoading();

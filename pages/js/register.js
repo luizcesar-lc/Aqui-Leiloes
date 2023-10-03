@@ -1,7 +1,7 @@
 // Para que o usuario continue logado
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    window.location.href = 'home.html';
+    window.location.href = '../../index.html';
   }
 });
 
@@ -48,7 +48,7 @@ function register() {
     .createUserWithEmailAndPassword(email, password)
     .then(() => {
       hideLoading();
-      window.location.href = 'home.html';
+      window.location.href = '../../index.html';
     })
     .catch((error) => {
       hideLoading();
@@ -116,7 +116,7 @@ function registerWithGoogle() {
     .then((result) => {
       // Usuário registrado com sucesso
       hideLoading();
-      window.location.href = 'home.html'; // Redirecionar para a página de login ou outra página após o registro
+      window.location.href = '../../index.html'; // Redirecionar para a página de login ou outra página após o registro
     })
     .catch((error) => {
       hideLoading();
