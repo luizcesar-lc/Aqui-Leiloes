@@ -1,11 +1,11 @@
 const firebaseConfig = {
-  apiKey: 'AIzaSyCWT_vJHAy4Kal1QxBN2EeTEivtoNHU9K8',
-  authDomain: 'voltaic-mantra-369917.firebaseapp.com',
-  projectId: 'voltaic-mantra-369917',
-  storageBucket: 'voltaic-mantra-369917.appspot.com',
-  messagingSenderId: '38492072148',
-  appId: '1:38492072148:web:52d6c6b353270e4f7ab341',
-  measurementId: 'G-127MVXRKM2',
+  apiKey: 'AIzaSyCxH0zZLcC-4PCYR59OW1LzbSPxOdcOI0w',
+  authDomain: 'aqui-leilao.firebaseapp.com',
+  projectId: 'aqui-leilao',
+  storageBucket: 'aqui-leilao.appspot.com',
+  messagingSenderId: '794574669691',
+  appId: '1:794574669691:web:964127665388e13fad1fde',
+  measurementId: 'G-2F9ED29BZM',
 };
 
 firebase.initializeApp(firebaseConfig);

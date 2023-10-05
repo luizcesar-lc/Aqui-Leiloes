@@ -51,7 +51,7 @@ function getErrorMessage(error) {
 //Função para validar recuperação de senha
 function recoverPassword() {
   const email = form.emailForm().value;
-
+  
   showLoading();
 
   firebase
