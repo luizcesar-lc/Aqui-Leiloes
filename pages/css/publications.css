@@ -1,0 +1,66 @@
+ol {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ol li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+  width: 15%;
+  margin: 1rem 1rem 0 1rem;
+  border: 1px #d9b4a7 solid;
+  padding: 0.5rem;
+}
+
+ol li:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+ol img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0.25rem auto;
+  padding: 0;
+  box-shadow: 0px 0px 15px #9e9d9d;
+}
+
+ol h2 {
+  color: black;
+  font-size: 20px;
+  font-family: Roboto;
+  font-weight: 400;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.marca,
+.time {
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.marca {
+  color: #888888;
+}
+
+.price {
+  color: black;
+  font-size: 15px;
+  font-family: Roboto;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.time {
+  color: #ff0000;
+  font-weight: bold;
+}

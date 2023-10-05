@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/pages/css/global.css" />
-    <link rel="stylesheet" href="/pages/css/home.css"/>
+    <link rel="stylesheet" href="/pages/css/home.css" />
+    <link rel="stylesheet" href="/pages/css/publications.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet"
     />
     <title>Aqui - Leilões</title>
   </head>
@@ -19,7 +20,11 @@
     <header>
       <nav class="nav-bar">
         <div class="logo">
-          <img src="/pages/icons/logo-branca.png" alt="Aqui Logo" class="AquiIcon" />
+          <img
+            src="/pages/icons/logo-branca.png"
+            alt="Aqui Logo"
+            class="AquiIcon"
+          />
         </div>
 
         <div class="nav-list">
@@ -27,7 +32,9 @@
             <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Cadastrar</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Vender</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Quem somos?</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Quem somos?</a>
+            </li>
           </ul>
         </div>
         <div class="buttonsHome">
@@ -35,16 +42,22 @@
         </div>
 
         <div class="mobile-menu-icon">
-          <button onclick="menuShow()"> <img class="icon-header" src="/pages/icons/menu-mobile.png" alt="Menu para mobile"></button>
+          <button onclick="menuShow()">
+            <img
+              class="icon-header"
+              src="/pages/icons/menu-mobile.png"
+              alt="Menu para mobile"
+            />
+          </button>
         </div>
       </nav>
 
       <div class="mobile-menu">
         <ul>
-            <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Cadastrar</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Vender</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Quem somos?</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Cadastrar</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Vender</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Quem somos?</a></li>
         </ul>
         <div class="buttonsHome">
           <button type="button" class="solid" onclick="logout()">Logout</button>
@@ -54,17 +67,50 @@
     <div class="containerSearch">
       <div class="search">
         <a href="#" hidden></a>
-        <input type="search" name='search' placeholder="O que você procura?">
-        <div class="list">
-
-        </div>
+        <input type="search" name="search" placeholder="O que você procura?" />
+        <div class="list"></div>
         <div class="buttonSearch">
-          <button type="button" class="searchButton" >AQUI</button>
+          <button type="button" class="searchButton">AQUI</button>
         </div>
       </div>
-
     </div>
 
+    <main>
+      <ol>
+        <li>
+          <img src="pages/images/caminho-para-sua-imagem.jpg" alt="Imagem do Produto" />
+          <h2>Título do Produto</h2>
+          <p class="marca">Marca do Produto</p>
+          <p class="price">Lance inicial: R$ 59,99</p>
+          <p class="price">Lance atual: R$ 99,99</p>
+          <p class="time">15d 13h restantes</p>
+        </li>
+        <li>
+          <img src="pages/images/caminho-para-sua-imagem.jpg" alt="Imagem do Produto" />
+          <h2>Título do Produto</h2>
+          <p class="marca">Marca do Produto</p>
+          <p class="price">Lance inicial: R$ 59,99</p>
+          <p class="price">Lance atual: R$ 99,99</p>
+          <p class="time">15d 13h restantes</p>
+        </li>
+        <li>
+          <img src="pages/images/caminho-para-sua-imagem.jpg" alt="Imagem do Produto" />
+          <h2>Título do Produto</h2>
+          <p class="marca">Marca do Produto</p>
+          <p class="price">Lance inicial: R$ 59,99</p>
+          <p class="price">Lance atual: R$ 99,99</p>
+          <p class="time">15d 13h restantes</p>
+        </li>
+        <li>
+          <img src="pages/images/caminho-para-sua-imagem.jpg" alt="Imagem do Produto" />
+          <h2>Título do Produto</h2>
+          <p class="marca">Marca do Produto</p>
+          <p class="price">Lance inicial: R$ 59,99</p>
+          <p class="price">Lance atual: R$ 99,99</p>
+          <p class="time">15d 13h restantes</p>
+        </li>
+      </ol>
+    </main>
   </body>
   <!-- Autenticação de Login-->
   <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
@@ -74,4 +120,4 @@
   <script src="/pages/js/auth-guard.js"></script>
   <script src="/pages/js/home.js"></script>
   <script src="/pages/js/header.js"></script>
-  </html>
+</html>
