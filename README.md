@@ -72,13 +72,13 @@ Ao longo do desenvolvimento foram criadas páginas importantes e também mudadas
 - Desenvolvimento de suporte ao usuário
 ## Screenshots
 
-![Home](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-![Rigistro](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Home](https://github.com/luizcesar-lc/Aqui-Leiloes/assets/66847811/927bf07d-503d-4f4a-8124-244c9e9e6597)
+![registro](https://github.com/luizcesar-lc/Aqui-Leiloes/assets/66847811/ec078e79-d0ce-4654-97ab-16149eb4ccec)
 
 
 ## Stack utilizada
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,firebase)](https://skillicons.dev)
 
 
 ##
