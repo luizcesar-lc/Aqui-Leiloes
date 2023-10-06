@@ -1,7 +1,10 @@
 ol {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  gap: 1rem;
   list-style-type: none;
   justify-content: center;
+  margin: 3rem 20% 0 20%;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -12,8 +15,6 @@ ol li {
   justify-content: flex-start;
 
   height: 100%;
-  width: 15%;
-  margin: 1rem 1rem 0 1rem;
   border: 1px #9e9d9d solid;
   padding: 0.5rem;
 }
